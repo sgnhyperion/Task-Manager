@@ -1,11 +1,10 @@
-const mongoose  = require('mongoose');
+const mongoose = require('mongoose');
 
 const DB_URL = process.env.DB_URL;
 
 mongoose.connect(DB_URL)
-.then(()=>{
-    console.log("Database connected successfully");
-})
-.catch((err)=>{
-    console.log("Database connection failed", err);
-})
+    .then(() => {
+        console.log('MongoDB is Connected...');
+    }).catch((err) => {
+        console.log('MongoDB Conn Error...', err);
+    })
